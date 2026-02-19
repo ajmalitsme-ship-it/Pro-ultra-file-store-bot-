@@ -104,8 +104,8 @@ After deploy your bot will generate links like:
 
 # 👑 Credits
 
-- Pyrogram Team  
-- Aiohttp Team  
+- botshubot team
+- bosshub team
 - MongoDB Motor  
 
 ---
