@@ -34,13 +34,13 @@ import aiohttp
 #                       CONFIG
 # ============================================================
 
-API_ID = int(os.getenv("API_ID", "0"))
-API_HASH = os.getenv("API_HASH", "")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+API_ID = int(os.getenv("API_ID", "27806628"))
+API_HASH = os.getenv("API_HASH", "25d88301e886b82826a525b7cf52e090")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8114942266:AAFtInLffruUXodXhf-1bAponngzCI9bRxg")
 
-OWNER_ID = int(os.getenv("OWNER_ID", "0"))
+OWNER_ID = int(os.getenv("OWNER_ID", "8525952693"))
 
-MONGO_URI = os.getenv("MONGO_URI", "")
+MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://Bosshub:JMaff0WvazwNxKky@cluster0.l0xcoc1.mongodb.net/?appName=Cluster0")
 DB_NAME = os.getenv("DB_NAME", "UltraProFileStore")
 
 WEB_URL = os.getenv("WEB_URL", "").rstrip("/")
