@@ -43,17 +43,17 @@ OWNER_ID = int(os.getenv("OWNER_ID", "8525952693"))
 MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://Bosshub:JMaff0WvazwNxKky@cluster0.l0xcoc1.mongodb.net/?appName=Cluster0")
 DB_NAME = os.getenv("DB_NAME", "UltraProFileStore")
 
-WEB_URL = os.getenv("WEB_URL", "").rstrip("/")
+WEB_URL = os.getenv("WEB_URL", "https://file-store-ultra-pro-bot.onrender.com").rstrip("/")
 PORT = int(os.getenv("PORT", "8080"))
 
 # UI / Info
 BOT_NAME = os.getenv("BOT_NAME", "UltraPro FileStore")
 SUPPORT_GROUP = os.getenv("SUPPORT_GROUP", "https://t.me/")
 UPDATES_CHANNEL = os.getenv("UPDATES_CHANNEL", "https://t.me/")
-START_IMAGE_URL = os.getenv("START_IMAGE_URL", "")
+START_IMAGE_URL = os.getenv("START_IMAGE_URL", "https://radare.arzfun.com/api/tg/photo?id=AgACAgQAAxkBAAEL61Bplx4lS79xzA_Aw0u96UpcyLOd_gAC3A1rG0H75VPNP_NHb-SW5wEAAwIAA3gAAzoE")
 
 # Logs
-LOG_CHANNEL = int(os.getenv("LOG_CHANNEL", "0"))
+LOG_CHANNEL = int(os.getenv("LOG_CHANNEL", "-1003559364122"))
 
 # Admin
 ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "admin")
