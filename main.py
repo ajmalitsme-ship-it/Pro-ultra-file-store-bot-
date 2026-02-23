@@ -321,20 +321,20 @@ async def route_download(request):
     return resp
 
 # ================= END OF PART 1 =================
-============================================================
-UltraPro FileStore - SINGLE FILE FULL ROOT (PART 2/2)
-Includes:
-Full Admin Panel UI
-Dashboard / Users / Files / FSub / Settings
-Ban / Unban / Delete file / Broadcast
-Bot + Web run together
-============================================================
+# ============================================================
+# UltraPro FileStore - SINGLE FILE FULL ROOT (PART 2/2)
+# Includes:
+# Full Admin Panel UI
+# Dashboard / Users / Files / FSub / Settings
+# Ban / Unban / Delete file / Broadcast
+# Bot + Web run together
+# ============================================================
 
 from aiohttp import web
 
-============================================================
-WEB: ADMIN LOGIN PAGE
-============================================================
+# ============================================================
+# WEB: ADMIN LOGIN PAGE
+# ============================================================
 
 async def route_admin_login(request: web.Request):
     if await require_admin(request):
@@ -383,9 +383,9 @@ async def route_admin_logout(request: web.Request):
     resp.del_cookie("admin_token")
     return resp
 
-============================================================
-WEB: ADMIN DASHBOARD
-============================================================
+# ============================================================
+# WEB: ADMIN DASHBOARD
+# ============================================================
 
 async def route_admin_dashboard(request: web.Request):
     if not await require_admin(request):
@@ -422,9 +422,9 @@ async def route_admin_dashboard(request: web.Request):
 """
     return web.Response(text=html_page("Dashboard", body), content_type="text/html")
 
-============================================================
-WEB: ADMIN USERS
-============================================================
+# ============================================================
+# WEB: ADMIN USERS
+# ============================================================
 
 async def route_admin_users(request: web.Request):
     if not await require_admin(request):
@@ -482,9 +482,9 @@ async def route_admin_unban(request: web.Request):
         await unban_user(uid)
     raise web.HTTPFound("/admin/users")
 
-============================================================
-WEB: ADMIN FILES
-============================================================
+# ============================================================
+# WEB: ADMIN FILES
+# ============================================================
 
 async def route_admin_files(request: web.Request):
     if not await require_admin(request):
@@ -540,10 +540,6 @@ async def route_admin_file_delete(request: web.Request):
     fid = request.match_info["file_id"].strip()
     await files_col.delete_one({"_id": fid})
     raise web.HTTPFound("/admin/files")
-
-============================================================
-WEB: ADMIN FSUB
-============================================================
 
 async def route_admin_fsub(request: web.Request):
     if not await require_admin(request):
